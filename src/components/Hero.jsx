@@ -200,35 +200,35 @@ export default function Hero() {
 
           {/* Profile placeholder */}
           <div className="relative mx-auto max-w-sm animate-fade-in-up">
-            <div className="relative">
-              <div className="absolute -inset-4 bg-[#990000]/20 blur-xl animate-pulse-red"></div>
-              <div className="relative bg-[#2D2D2D] shadow-2xl border-2 border-[#990000]/40 overflow-hidden"
-                style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}>
-                {/* Blood stains on profile frame */}
-                <div className="absolute top-2 right-2 w-20 h-20 animate-blood-splash">
-                  <svg viewBox="0 0 200 200" className="w-full h-full text-[#990000]/40" fill="currentColor">
-                    <path d="M100 10C65 10 35 45 25 85C15 125 35 160 65 180C95 200 135 190 158 155C181 120 180 75 158 42C140 18 120 10 100 10Z"/>
-                  </svg>
-                </div>
-                <div className="absolute bottom-5 left-5 w-14 h-14 animate-blood-splash-delayed">
-                  <svg viewBox="0 0 200 200" className="w-full h-full text-[#990000]/35" fill="currentColor">
-                    <path d="M100 10C72 10 42 42 30 82C18 122 35 155 62 172C89 189 128 180 150 150C172 120 170 78 150 45C134 20 118 10 100 10Z"/>
-                  </svg>
-                </div>
-                <div className="aspect-square flex items-center justify-center relative">
-                  <div className="text-center p-8">
-                    <div className="text-8xl mb-4 font-creepster text-[#990000] animate-glitch drop-shadow-[0_0_15px_rgba(153,0,0,0.5)]">J</div>
-                    <p className="text-2xl font-creepster text-[#F5F5F5] tracking-wider">{authorInfo.name.toUpperCase()}</p>
-                    <p className="text-[#E65100] text-sm font-oswald uppercase tracking-widest mt-2">Author Photo</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="absolute -top-4 -right-4 bg-[#E65100] text-[#1A1A1A] w-14 h-14 flex items-center justify-center font-creepster text-xl shadow-lg animate-warning border-2 border-[#cc4400]"
-              style={{ clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)' }}>
-              !
-            </div>
-          </div>
+  <div className="relative">
+    <div className="absolute -inset-4 bg-[#990000]/20 blur-xl animate-pulse-red"></div>
+    <div className="relative bg-[#2D2D2D] shadow-2xl border-2 border-[#990000]/40 overflow-hidden"
+      style={{ clipPath: 'polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%)' }}>
+      {/* Blood stains on profile frame */}
+      <div className="absolute top-2 right-2 w-20 h-20 animate-blood-splash">
+        <svg viewBox="0 0 200 200" className="w-full h-full text-[#990000]/40" fill="currentColor">
+          <path d="M100 10C65 10 35 45 25 85C15 125 35 160 65 180C95 200 135 190 158 155C181 120 180 75 158 42C140 18 120 10 100 10Z"/>
+        </svg>
+      </div>
+      <div className="absolute bottom-5 left-5 w-14 h-14 animate-blood-splash-delayed">
+        <svg viewBox="0 0 200 200" className="w-full h-full text-[#990000]/35" fill="currentColor">
+          <path d="M100 10C72 10 42 42 30 82C18 122 35 155 62 172C89 189 128 180 150 150C172 120 170 78 150 45C134 20 118 10 100 10Z"/>
+        </svg>
+      </div>
+      <div className="aspect-square flex items-center justify-center relative">
+        <div className="text-center p-8">
+          <div className="text-7xl mb-4 font-scary text-[#990000] animate-glitch drop-shadow-[0_0_15px_rgba(153,0,0,0.5)]">J</div>
+          <p className="text-xl font-scary text-[#F5F5F5] tracking-wider">{authorInfo.name.toUpperCase()}</p>
+          <p className="text-[#E65100] text-sm font-scary tracking-widest mt-2">Author Photo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div className="absolute -top-4 -right-4 bg-[#E65100] text-[#1A1A1A] w-14 h-14 flex items-center justify-center font-scary text-xl shadow-lg animate-warning border-2 border-[#cc4400]"
+    style={{ clipPath: 'polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)' }}>
+    !
+  </div>
+</div>
         </div>
       </div>
     </section>
