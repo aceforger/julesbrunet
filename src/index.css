@@ -3,6 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Nosifer&family=Creepster&family=Eater&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Bangers&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Nosifer&family=Creepster&family=Eater&display=swap');
 
+@font-face {
+  font-family: 'Scary Halloween';
+  src: url('/images/Scary Halloween Font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-scary {
+  font-family: 'Scary Halloween', 'Creepster', cursive;
+}
+
 html {
   scroll-behavior: smooth;
 }

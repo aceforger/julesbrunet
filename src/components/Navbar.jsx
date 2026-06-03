@@ -45,10 +45,10 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center gap-3 group">
-            <span className="font-bangers text-3xl text-[#E65100] animate-glitch tracking-wider">
-              {authorInfo.name.toUpperCase()}
+            <span className="font-scary text-2xl text-[#E65100] animate-glitch tracking-wider">
+                {authorInfo.name.toUpperCase()}
             </span>
-          </a>
+            </a>
 
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link, i) => (

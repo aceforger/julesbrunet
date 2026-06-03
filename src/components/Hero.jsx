@@ -11,13 +11,23 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center bg-[#1A1A1A] relative overflow-hidden grunge-texture">
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden"
+      style={{ 
+        backgroundImage: 'url(/images/bg.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
+      
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-[#1A1A1A]/60 z-0"></div>
+      
       {/* BLOOD OVERLAY - Dark red tint */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#990000]/10 via-transparent to-[#990000]/15 z-0"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#990000]/5 via-transparent to-[#990000]/15 z-0"></div>
 
       {/* BLOOD POOLS */}
       <div className="absolute bottom-0 left-0 w-[500px] h-[200px] animate-pool" style={{ animationDelay: '0.5s' }}>
-        <svg viewBox="0 0 500 200" className="w-full h-full text-[#990000]/25" fill="currentColor">
+        <svg viewBox="0 0 500 200" className="w-full h-full text-[#990000]/14" fill="currentColor">
           <ellipse cx="200" cy="120" rx="250" ry="80"/>
           <ellipse cx="250" cy="100" rx="180" ry="60" opacity="0.7"/>
           <ellipse cx="150" cy="140" rx="120" ry="40" opacity="0.5"/>
@@ -25,7 +35,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute top-10 right-0 w-[400px] h-[150px] animate-pool" style={{ animationDelay: '1s' }}>
-        <svg viewBox="0 0 400 150" className="w-full h-full text-[#990000]/20" fill="currentColor">
+        <svg viewBox="0 0 400 150" className="w-full h-full text-[#990000]/10" fill="currentColor">
           <ellipse cx="300" cy="70" rx="200" ry="60"/>
           <ellipse cx="250" cy="80" rx="150" ry="40" opacity="0.6"/>
         </svg>
@@ -147,8 +157,8 @@ export default function Hero() {
               HORROR AUTHOR
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-creepster text-[#F5F5F5] mb-6 leading-tight tracking-wider animate-skew-in drop-shadow-[0_0_20px_rgba(153,0,0,0.5)] whitespace-nowrap">
-            {authorInfo.name.toUpperCase()}
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-scary text-[#F5F5F5] mb-6 leading-tight tracking-wider animate-skew-in drop-shadow-[0_0_20px_rgba(153,0,0,0.5)] whitespace-nowrap">
+              {authorInfo.name.toUpperCase()}
             </h1>
 
             <p className="text-2xl text-[#E65100] mb-6 font-nosifer tracking-wider animate-fade-in-up-delayed drop-shadow-[0_0_10px_rgba(230,81,0,0.4)]">
