@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Nosifer&family=Creepster&family=Eater&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&family=Bangers&family=Oswald:wght@400;500;600;700&family=Roboto+Condensed:wght@400;700&family=Nosifer&family=Creepster&family=Eater&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -32,6 +34,26 @@ body {
 
 .font-roboto {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+.font-creepster {
+  font-family: 'Creepster', cursive;
+}
+
+.font-nosifer {
+  font-family: 'Nosifer', cursive;
+}
+
+.font-eater {
+  font-family: 'Eater', cursive;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Blood drip animation */
@@ -123,4 +145,99 @@ body {
 /* Grunge texture overlay */
 .grunge-texture {
   background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+}
+
+/* Blood splash */
+@keyframes bloodSplash {
+  0% { transform: scale(0) rotate(0deg); opacity: 0; }
+  50% { transform: scale(1.2) rotate(15deg); opacity: 0.8; }
+  70% { transform: scale(0.95) rotate(-5deg); opacity: 0.6; }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.4; }
+}
+
+.animate-blood-splash {
+  animation: bloodSplash 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-blood-splash-delayed {
+  animation: bloodSplash 0.8s ease-out forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.animate-blood-splash-slow {
+  animation: bloodSplash 1s ease-out forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+/* Blood stain spread */
+@keyframes stainSpread {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.1); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 0.3; }
+}
+
+.animate-stain {
+  animation: stainSpread 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+/* Blood drip slow */
+@keyframes bloodDripSlow {
+  0% { transform: translateY(-100%); opacity: 0; }
+  30% { opacity: 0.7; }
+  70% { opacity: 0.5; }
+  100% { transform: translateY(80vh); opacity: 0; }
+}
+
+.animate-blood-drip-slow {
+  animation: bloodDripSlow 6s ease-in infinite;
+}
+
+/* Blood drip fast */
+@keyframes bloodDripFast {
+  0% { transform: translateY(-100%); opacity: 0; }
+  20% { opacity: 0.9; }
+  70% { opacity: 0.6; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.animate-blood-drip-fast {
+  animation: bloodDripFast 2s ease-in infinite;
+}
+
+/* Blood pool spread */
+@keyframes poolSpread {
+  0% { transform: scale(0) translate(-50%, -50%); opacity: 0; }
+  100% { transform: scale(1) translate(-50%, -50%); opacity: 0.15; }
+}
+
+.animate-pool {
+  animation: poolSpread 2s ease-out forwards;
+  opacity: 0;
+}
+
+/* Handprint appear */
+@keyframes handprintAppear {
+  0% { transform: scale(0) rotate(-20deg); opacity: 0; }
+  80% { transform: scale(1.05) rotate(2deg); opacity: 0.35; }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.25; }
+}
+
+.animate-handprint {
+  animation: handprintAppear 1s ease-out forwards;
+  opacity: 0;
+}
+
+/* Blood smear slide */
+@keyframes smearSlide {
+  0% { transform: translateX(-100%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 0.4; }
+}
+
+.animate-smear {
+  animation: smearSlide 1.5s ease-out forwards;
+  opacity: 0;
 }
